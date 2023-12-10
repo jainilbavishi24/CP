@@ -6,7 +6,8 @@ void solve()
 {
     lli a,b,xk,yk,xq,yq;
     cin>>a>>b>>xk>>yk>>xq>>yq;
-    
+    lli c=a+b;
+    cout<<c<<endl;
 
 
     
