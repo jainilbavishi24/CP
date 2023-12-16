@@ -30,16 +30,14 @@ void solve()
         }
     }
     j = n - 1;
+    string s = s2;
+    reverse(s.begin(), s.end());
     for (i = 0; i < n; i++)
     {
-        if (s1[i] != s2[j])
+        if (s1[i] != s[i])
         {
-            j--;
+
             reversecnt++;
-        }
-        else
-        {
-            j--;
         }
     }
     // cout << frontcnt << " " << reversecnt << endl;
@@ -52,6 +50,7 @@ void solve()
     string str = s2;
     string b = s2;
     lli ans = 2 * frontcnt - 1;
+
     if (frontcnt <= 1)
     {
         cout << frontcnt << endl;
@@ -59,7 +58,7 @@ void solve()
     }
     if (reversecnt == 0)
     {
-        cout << 0 << endl;
+        cout << 2 << endl;
         return;
     }
     else
@@ -88,7 +87,7 @@ void solve()
         }
         ans = min(ans, cnt);
     }
-    
+
     cout << ans << endl;
     return;
 }
